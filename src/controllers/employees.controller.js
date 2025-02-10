@@ -1,5 +1,9 @@
 import { pool } from "../db.js";
 
+export const getHome = (req, res) => {
+        res.send("HOLA MUNDO")
+        };
+
 export const getEmployees = async (req, res) => {
     try {
         const [rows] = await pool.query("SELECT * FROM employee");
