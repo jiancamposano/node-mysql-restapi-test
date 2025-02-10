@@ -7,4 +7,7 @@ export const pool = createPool({
     password: DB_PASSWORD,
     port: DB_PORT,
     database: DB_DATABASE,
+    ssl: {
+        rejectUnauthorized: false // Permitir conexiones sin verificación estricta del certificado
+    }
 });
